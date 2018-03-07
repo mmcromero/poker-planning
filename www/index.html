@@ -3,127 +3,122 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>Só de Cenoura Garçom</title>
+    <title>Poker Planning</title>
     <link rel="stylesheet" href="icons/material.css">
     <link rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    
     <style type="text/css">
+      body {
+          margin: 0px
+      }
+      .container2 {
+          width: 100%;
+          /*height: 100vh;*/
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+      }
+      .box {
+          padding: 0px 20px;
+         /* background: #000;*/
+      }
+      .card-panel {
+          height: 90px;
+          width: 70px;
+          transition: box-shadow .25s;
+          margin: 0.5rem 0 1rem 0;
+          border-color: #de7019;
+          border-radius: 15px;
+          border-width: medium;
+          border-style: solid;
+          background-color: #228fb9 !important;
+              padding: 0px;
+      }
 
-    body {
-        margin: 0px
-    }
-    .container2 {
-        width: 100%;
-        /*height: 100vh;*/
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    .box {
-        padding: 0px 20px;
-       /* background: #000;*/
-    }
-.card-panel {
-    height: 90px;
-    width: 70px;
-    transition: box-shadow .25s;
-    margin: 0.5rem 0 1rem 0;
-    border-color: #de7019;
-    border-radius: 15px;
-    border-width: medium;
-    border-style: solid;
-    background-color: #228fb9 !important;
-        padding: 0px;
-}
+      .card-panel-big{
+              height: 375px;
+          width: 270px;
+          transition: box-shadow .25s;
+          margin: 0.5rem 0 1rem 0;
+          border-color: #de7019;
+          border-radius: 15px;
+          border-width: medium;
+          border-style: solid;
+          background-color: #228fb9 !important;
+          padding: 0px;
+          margin-top: 50px;
+          padding-top: 50px
+      }
+      .margem-esquerda40{
+              margin-right: 35px !important;
+      }
+      .texto-card{
+          font-size: 29px;
+          position: relative;
+          top: 21px;
+      }
 
-.card-panel-big{
-        height: 375px;
-    width: 270px;
-    transition: box-shadow .25s;
-    margin: 0.5rem 0 1rem 0;
-    border-color: #de7019;
-    border-radius: 15px;
-    border-width: medium;
-    border-style: solid;
-    background-color: #228fb9 !important;
-    padding: 0px;
-    margin-top: 50px;
-    padding-top: 50px
-}
-.margem-esquerda40{
-        margin-right: 35px !important;
-}
-.texto-card{
-    font-size: 29px;
-    position: relative;
-    top: 21px;
-}
+      .texto-card-big{
+          font-size: 150px;
+          position: relative;
+          top: 21px;
+      }
 
-.texto-card-big{
-    font-size: 150px;
-    position: relative;
-    top: 21px;
-}
-    
+      .img-coffe{
 
-
-
-/* O container geral define a perspectiva */  
-.flip-container { perspective: 1000; }      
-
-/* vira os containers frente e verso quando o mouse passa em cima */
-.flip-container.hover .flipper {        
-  transform: rotateY(180deg);   
-}    
-.flip-container.hover2 .flipper {        
-  transform: rotateY(180deg);   
-}  
-.flip-container, .front, .back {    
-  width: 320px;     
-  height: 480px;  
-}
-
-/* define a velocidade da transição */
-.flipper {      
-  transition: 0.6s;     
-  transform-style: preserve-3d;     
-  position: relative;  
-}
-    
-/* esconde o verso durante a animação */
-.front, .back {     
-  backface-visibility: hidden;      
-  position: absolute;   
-  top: 0;   
- left: 0;  
-}
-    
-/* frente posicionada sobre o verso */
-.front { z-index: 2;  }    
-
-/* verso inicialmente escondido */
-.back { transform: rotateY(180deg); }
-
-#bt-voltar{
-        background-color: transparent;
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    top: 0px;
-}
+      }
+      
 
 
+      /* O container geral define a perspectiva */  
+      .flip-container { perspective: 1000; }      
 
+      /* vira os containers frente e verso quando o mouse passa em cima */
+      .flip-container.hover .flipper {        
+        transform: rotateY(180deg);   
+      }    
+      .flip-container.hover2 .flipper {        
+        transform: rotateY(180deg);   
+      }  
+      .flip-container, .front, .back {    
+        width: 320px;     
+        height: 480px;  
+      }
 
+      /* define a velocidade da transição */
+      .flipper {      
+        transition: 0.6s;     
+        transform-style: preserve-3d;     
+        position: relative;  
+      }
+          
+      /* esconde o verso durante a animação */
+      .front, .back {     
+        backface-visibility: hidden;      
+        position: absolute;   
+        top: 0;   
+       left: 0;  
+      }
+          
+      /* frente posicionada sobre o verso */
+      .front { z-index: 2;  }    
 
+      /* verso inicialmente escondido */
+      .back { transform: rotateY(180deg); }
 
-
-
+      #bt-voltar{
+              background-color: transparent;
+          width: 100%;
+          position: absolute;
+          height: 100%;
+          top: 0px;
+      }
 
     </style>
 </head>
-<body>
+<body onload="onLoad()">
 
 
 
