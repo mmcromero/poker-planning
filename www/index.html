@@ -129,8 +129,46 @@
         top: -5px;
       }
 
+      .cafe-img-big{
+        max-width: 128px;
+        position: relative;
+        top: 75px;
+      }
+
       .cafe-img-white{
           filter: invert(100%)
+      }
+
+
+      #slide-out li a.ativo{
+        background-color: rgba(0,0,0,0.05);
+      }
+
+      .side-nav li>a:hover {
+        background-color: #fff !important;
+      }
+
+      .texto-final{
+        position: relative;
+        top: 66px;
+        left: -4px;
+      }
+
+      .div-fundo-bt{
+        position: relative;
+        top: -46px;
+        left: -3px;
+        width: 70px;
+        height: 50px;
+      }
+
+      .div-fundo-bt-big{
+        position: relative;
+        top: -250px;
+        left: 0px;
+        width: 264px;
+        height: 371px;
+        /*background: black;*/
       }
 
     </style>
@@ -144,154 +182,174 @@
 
         <h6 class="container brown-text">Cartas</h6>
         <li><div class="divider"></div></li>
-        <li><a class="waves-effect black-text" href="#">Fibonacci</a></li>
-        <li><a class="waves-effect black-text" href="#">Standard</a></li>
+        <li><a class="waves-effect black-text menu-lateral fibo" href="#">Fibonacci</a></li>
+        <li><a class="waves-effect black-text menu-lateral stand" href="#">Standard</a></li>
         
         <h6 class="container brown-text">Ferramentas</h6>
         <li><div class="divider"></div></li>
-        <li><a class="waves-effect black-text" href="#">Cronometro / Timer</a></li>
-        <li><a class="waves-effect black-text" href="#">Ágil</a></li>
-        <li><a class="waves-effect black-text" href="#">Scrum</a></li>
+        <li><a class="waves-effect black-text menu-lateral crono" href="#">Cronometro / Timer</a></li>
+        <li><a class="waves-effect black-text menu-lateral agil" href="#">Ágil</a></li>
+        <li><a class="waves-effect black-text menu-lateral scrum" href="#">Scrum</a></li>
         <h6 class="container brown-text">App</h6>
         <li><div class="divider"></div></li>
-        <li><a class="waves-effect black-text" href="#">Configurações</a></li>
-        <li><a class="waves-effect black-text" href="#">Compartilhar</a></li>
+        <li><a class="waves-effect black-text menu-lateral config" href="#">Configurações</a></li>
+        <li><a class="waves-effect black-text menu-lateral share" href="#">Compartilhar</a></li>
         <li><div class="divider"></div></li>
     </ul>
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
 
-    
 
 
 
 
-
-<div class="container2">
-
-    <div class="flip-container box1" id="flip-toggle">     
-      <div class="flipper">         
-        <div class="front">             
-            <div class="box">
-                <div class="col s4 m5 center-align left margem-esquerda40">
-                    <div class="card-panel">
-                      <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="0" data-standard="0">0
-                      </span></a>
-                    </div>
-                    <div class="card-panel">
-                      <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="3" data-standard="2">2
-                      </span></a>
-                    </div>
-                    <div class="card-panel">
-                      <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="13" data-standard="8">8
-                      </span></a>
-                    </div>
-                    <div class="card-panel">
-                      <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="55" data-standard="40">40
-                      </span></a>
-                    </div>
-                    <div class="card-panel">
-                      <a href="#" class="bt-slc-carta"><span class="white-text texto-card standard-hide" data-fibo="?" data-standard="">
-                      </span></a>
-                    </div>
-                </div>
-                <div class="col s4 m5 center-align left margem-esquerda40">
-                    <div class="card-panel">
-                      <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="1" data-standard="1/2">1/2
-                      </span></a>
-                    </div>
-                    <div class="card-panel">
-                      <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="5" data-standard="3">3
-                      </span></a>
-                    </div>
-                    <div class="card-panel">
-                      <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="21" data-standard="13">13
-                      </span></a>
-                    </div>
-                    <div class="card-panel">
-                      <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="89" data-standard="100">100
-                      </span></a>
-                    </div>
-                    <div class="card-panel">
-                      <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="coffe" data-standard="coffe">
-                        <img src="img/Coffee-128.png" class="cafe-img cafe-img-white">
-                      </span></a>
-                    </div>
-                </div>
-                <div class="col s4 m5 center-align left">
-                    <div class="card-panel">
-                      <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="2" data-standard="1">1
-                      </span></a>
-                    </div>
-                    <div class="card-panel">
-                      <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="8" data-standard="5">5
-                      </span></a>
-                    </div>
-                    <div class="card-panel">
-                      <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="34" data-standard="20">20
-                      </span></a>
-                    </div>
-                    <div class="card-panel">
-                      <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="144" data-standard="?">?
-                      </span></a>
-                    </div>
-                </div>
-            </div>   
-        </div>          
-        <div class="back">              
-            <div class="box">
-                <div class="col s4 m5 center-align left">
-                    <div class="card-panel-big">
-                          <a href="#" class="bt-slc-carta">
-                            <span class="">
-                              <img class="logo-big" src="img/logo-consultorias/logo-brq.svg">
-                            </span>
+<div id="cards" class="telas">
+  <div class="container2 cards1">
+      <div class="flip-container box1" id="flip-toggle">     
+        <div class="flipper">         
+          <div class="front">             
+              <div class="box">
+                  <div class="col s4 m5 center-align left margem-esquerda40">
+                      <div class="card-panel">
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="0" data-standard="0">0</span>
+                        <div class="div-fundo-bt"></div>
+                        </a>
+                      </div>
+                      <div class="card-panel">
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="3" data-standard="2">2</span>
+                          <div class="div-fundo-bt"></div>
+                        </a>
+                      </div>
+                      <div class="card-panel">
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="13" data-standard="8">8</span>
+                          <div class="div-fundo-bt"></div>
+                        </a>
+                      </div>
+                      <div class="card-panel">
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="55" data-standard="40">40</span>
+                          <div class="div-fundo-bt"></div>
+                        </a>
+                      </div>
+                      <div class="card-panel standard-hide hide">
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="?" data-standard=""></span>
+                          <div class="div-fundo-bt"></div>
+                        </a>
+                      </div>
+                  </div>
+                  <div class="col s4 m5 center-align left margem-esquerda40">
+                      <div class="card-panel">
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="1" data-standard="1/2">1/2</span>
+                          <div class="div-fundo-bt"></div>
+                        </a>
+                      </div>
+                      <div class="card-panel">
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="5" data-standard="3">3</span>
+                          <div class="div-fundo-bt"></div>
+                        </a>
+                      </div>
+                      <div class="card-panel">
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="21" data-standard="13">13</span>
+                          <div class="div-fundo-bt"></div>
+                        </a>
+                      </div>
+                      <div class="card-panel">
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="89" data-standard="100">100</span>
+                          <div class="div-fundo-bt"></div>
+                        </a>
+                      </div>
+                      <div class="card-panel">
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="coffe" data-standard="coffe">
+                          <img src="img/Coffee-128.png" class="cafe-img cafe-img-white"></span>
+                          <div class="div-fundo-bt"></div>
                           </a>
-                    </div>
-                </div>
-            </div>      
-        </div>      
-      </div>  
-    </div>
+                      </div>
+                  </div>
+                  <div class="col s4 m5 center-align left">
+                      <div class="card-panel">
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="2" data-standard="1">1</span>
+                          <div class="div-fundo-bt"></div>
+                        </a>
+                      </div>
+                      <div class="card-panel">
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="8" data-standard="5">5</span>
+                          <div class="div-fundo-bt"></div>
+                        </a>
+                      </div>
+                      <div class="card-panel">
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="34" data-standard="20">20</span>
+                          <div class="div-fundo-bt"></div>
+                        </a>
+                      </div>
+                      <div class="card-panel">
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="144" data-standard="?">?</span>
+                          <div class="div-fundo-bt"></div>
+                        </a>
+                      </div>
+                  </div>
+              </div>   
+          </div>          
+          <div class="back">              
+              <div class="box">
+                  <div class="col s4 m5 center-align left">
+                      <div class="card-panel-big">
+                            <a href="#" class="bt-slc-carta">
+                              <span class=""><img class="logo-big" src="img/logo-consultorias/logo-brq.svg"></span>
+                              <div class="div-fundo-bt-big"></div>
+                            </a>
+                      </div>
+                  </div>
+              </div>      
+          </div>      
+        </div>  
+      </div>
+  </div>
 
-
+  <div class="container2 cards2 hide">
+      <div class="flip-container box2" id="flip-toggle">     
+        <div class="flipper">         
+          <div class="front">             
+              <div class="box">
+                  <div class="col s4 m5 center-align left">
+                      <div class="card-panel-big">
+                            <a href="#" class="mostrar-carta">
+                              <span class=""><img class="logo-big" src="img/logo-consultorias/logo-brq.svg"></span>
+                              <div class="div-fundo-bt-big"></div>
+                            </a>
+                      </div>
+                  </div>
+              </div>   
+          </div>          
+          <div class="back">              
+              <div class="box">
+                  <div class="col s4 m5 center-align left">
+                      <div class="card-panel-big">
+                          <a href="#" class="voltar-selec-card">
+                            <span id="target" class="white-text texto-card-big texto-final"></span>
+                            <img src="img/Coffee-128.png" class="cafe-img-big cafe-img-white">
+                            <div class="div-fundo-bt-big"></div>
+                          </a>
+                      </div>
+                  </div>
+              </div>      
+          </div>      
+        </div>  
+      </div>
+  </div>
 </div>
 
-<div class="container2">
-
-    <div class="flip-container box2" id="flip-toggle">     
-      <div class="flipper">         
-        <div class="front">             
-            <div class="box">
-                <div class="col s4 m5 center-align left">
-                    <div class="card-panel-big">
-                        <a href="#">
-                          <span class="white-text texto-card-big">logo-front
-                          </span>
-                        </a>
-                    </div>
-                </div>
-            </div>   
-        </div>          
-        <div class="back">              
-            <div class="box">
-                <div class="col s4 m5 center-align left">
-                    <div class="card-panel-big">
-                        <a href="#">
-                          <span id="target" class="white-text texto-card-big">100
-                          </span>
-                        </a>
-                    </div>
-                </div>
-            </div>      
-        </div>      
-      </div>  
-    </div>
-
-
+<div id="crono" class="telas hide">
+  <h1>Crono</h1>
+  <input type="text" class="timepicker">
 </div>
-
-<form action="#">
+<div id="agil" class="telas hide">
+  <h1>Ágil</h1>
+</div>
+<div id="scrum" class="telas hide">
+  <h1>Scrum</h1>
+</div>
+<div id="config" class="telas hide">
+  <h1>Config</h1>
+  <form action="#">
     <div class="file-field input-field">
       <div class="btn">
         <span>File</span>
@@ -302,11 +360,13 @@
       </div>
     </div>
   </form>
+</div>
 
-  <input type="text" class="timepicker">
 
-<a href="#"  class="hide" id="bt-continuar"></a>
-<a href="#"  class="hide" id="bt-voltar"></a>
+  
+
+<!-- <a href="#"  class="hide" id="bt-continuar"></a>
+<a href="#"  class="hide" id="bt-voltar"></a> -->
 
 
   <script src="cordova.js"></script>
