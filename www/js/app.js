@@ -1,4 +1,29 @@
+var trocaTextoBotão = function (tipo) {
+  if(tipo == "fibo"){
+    $("titulo-local").text("Baralho fibonacci");
+    $( ".texto-card" ).each(function( index ) {
+      if($(this).attr('data-fibo') != "coffe"){
+        $( this ).text($(this).attr('data-fibo'));
+        // mostra carta inferior esquerdo
+        $(".standard-hide").removeClass("hide");
+      }
+      
 
+
+    });
+  }else{
+    $( ".texto-card" ).each(function( index ) {
+      if($(this).attr('data-standard') != "coffe"){
+        $( this ).text($(this).attr('data-standard'));
+        // esconde carta inferior esquerdo
+        $(".standard-hide").addClass("hide");
+      }
+
+    });
+  }
+}
+
+trocaTextoBotão("fibo");
 
   // Initialize collapse button
   $(".button-collapse").sideNav();
@@ -103,29 +128,7 @@ $(".menu-lateral").on("click", function(){
   
 });
 
-var trocaTextoBotão = function (tipo) {
-  if(tipo == "fibo"){
-    $( ".texto-card" ).each(function( index ) {
-      if($(this).attr('data-fibo') != "coffe"){
-        $( this ).text($(this).attr('data-fibo'));
-        // mostra carta inferior esquerdo
-        $(".standard-hide").removeClass("hide");
-      }
-      
 
-
-    });
-  }else{
-    $( ".texto-card" ).each(function( index ) {
-      if($(this).attr('data-standard') != "coffe"){
-        $( this ).text($(this).attr('data-standard'));
-        // esconde carta inferior esquerdo
-        $(".standard-hide").addClass("hide");
-      }
-
-    });
-  }
-}
 
 
 
@@ -149,7 +152,7 @@ var onError = function () {
 
 function onLoad() {
     //inicia em fibo
-    trocaTextoBotão("fibo");
+    
     $(".menu-lateral.fibo").addClass("ativo");
 
 
