@@ -12,6 +12,11 @@
       body {
           margin: 0px
       }
+
+      html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
       .container2 {
           width: 100%;
           /*height: 100vh;*/
@@ -19,39 +24,43 @@
           flex-direction: row;
           justify-content: center;
           align-items: center;
+              position: fixed;
+            top: 70px;
       }
       .box {
+        font-family: monospace;
+
               margin-left: 25px;
           /*padding: 0px 20px;*/
          /* background: #000;*/
       }
       .card-panel {
-          height: 90px;
+          height: 80px;
           width: 70px;
           transition: box-shadow .25s;
-          margin: 0.5rem 0 1rem 0;
-          border-color: #de7019;
+          /* margin: -0.5rem 0 1rem 0; */
+          margin-top: -7px;
+          border-color: #e67700 ; /*#de7019;*/
           border-radius: 15px;
           border-width: medium;
           border-style: solid;
-          background-color: #228fb9 !important;
-              padding: 0px;
+          background-color: #0086c0 !important; /*#228fb9 !important;*/ 
+          padding: 0px;
       }
 
       .card-panel-big{
-              height: 375px;
+              height: 430px;
           width: 270px;
           transition: box-shadow .25s;
-          margin: 0.5rem 0 1rem 0;
-          border-color: #de7019;
+          /*margin: 0.5rem 0 1rem 0;*/
+          border-color:  #e67700 ; /*#de7019;*/
           border-radius: 15px;
           border-width: medium;
           border-style: solid;
-          background-color: #228fb9 !important;
-          padding: 0px;
-          margin-top: 50px;
-          padding-top: 50px
-              margin-left: 22px;
+          background-color: #0086c0 !important; /*#228fb9 !important;*/ 
+          margin-top: -7px;
+          padding-top: 31px;
+
       }
       .margem-esquerda40{
               margin-right: 35px !important;
@@ -59,14 +68,19 @@
       .texto-card{
           font-size: 29px;
           position: relative;
-          top: 21px;
+          top: 16px;
+          /*top: 21px;*/
       }
 
       .texto-card-big{
-          font-size: 150px;
+          font-size: 200px;
           position: relative;
           top: 21px;
       }
+      .texto-card-big-3-casas-decimais{
+            font-size: 160px !important ;
+            top: 50px !important;
+        }
 
       .img-coffe{
 
@@ -86,7 +100,7 @@
       }  
       .flip-container, .front, .back {    
         width: 320px;     
-        height: 480px;  
+        height: 450px;  /*height: 480px; */ 
       }
 
       /* define a velocidade da transição */
@@ -98,10 +112,12 @@
           
       /* esconde o verso durante a animação */
       .front, .back {     
-        backface-visibility: hidden;      
-        position: absolute;   
-        top: 0;   
-       left: 0;  
+        backface-visibility: hidden; 
+
+    position: fixed;     
+        /*position: absolute;   
+        top: 25px;   
+       left: 0;  */
       }
           
       /* frente posicionada sobre o verso */
@@ -117,8 +133,11 @@
           height: 100%;
           top: 0px;
       }
-
-      .logo-big{
+      .logo-big {
+          max-width: 230px;
+          margin-top: 23%;
+      }
+      .logo-big-brq{
           max-width: 230px;
           margin-top: 45%;
       }
@@ -149,9 +168,12 @@
       }
 
       .texto-final{
-        position: relative;
+        /*position: relative;
         top: 66px;
-        left: -4px;
+        left: -4px;*/
+            position: relative;
+      top: 20px;
+      left: -4px;
       }
 
       .div-fundo-bt{
@@ -163,14 +185,30 @@
       }
 
       .div-fundo-bt-big{
-        position: relative;
-        top: -250px;
-        left: 0px;
-        width: 264px;
-        height: 371px;
+            position: relative;
+    top: -332px;
+    left: 0px;
+    width: 264px;
+    height: 423px;
+    /* background: black; */
         /*background: black;*/
       }
 
+      .laranja-brq{
+        background-color: #ff8c00
+      }
+      .laranja-brq-text{
+        color: #ff8c00
+      }
+
+      .azul-brq{
+
+          background-color: #0086c0;
+      }
+      .azul-brq-text{
+
+          color: #0086c0;
+      }
 
       nav a{
 
@@ -178,43 +216,126 @@
 
       nav img{
         float: right;
-        width: 90px;
-        margin-top: 7px;
+    width: 69px;
+    margin-top: 12px;
+    margin-right: 11px;
       }
 
       nav p{
         margin: 0;
         padding: 0;
+            font-size: 21px;
       }
+
+      .rodape{
+            position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    height: 38px;
+      }
+
+      .txt-rodape{
+            position: relative;
+    top: -5px;
+    text-align: center;
+      }
+
+      .topo-fixo{
+            position: fixed;
+            z-index: 999;
+      }
+
+
+
+      .centro{
+        position: absolute;
+    top: 54%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    width: 290px;
+    height: 480px;
+      }
+
+      .toast-action{
+
+        margin-right: -18px !important;
+      }
+
+      .modal .modal-content {
+    padding: 7px !important;
+}
+textarea {
+
+    height: 20rem !important;
+
+}
+
+.select-cartas-topo{
+      position: relative;
+    top: -424px;
+}
+
+.carta-escondida-topo{
+  position: relative;
+    top: -436px;
+}
+
+      .fade-out { 
+        transition: 0.5s;
+        opacity: 0;
+        }
+      .fade-in { 
+        transition: 1s;
+        opacity: 1;
+         }
+
+         .vai-pro-lado{
+            left: 600px !important;
+         }
+
+
 
     </style>
 </head>
 <body onload="onLoad()">
 
-    <nav class="indigo darken-4" id="topo">
+    <nav class="azul-brq topo-fixo" id="topo">
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-        <img class="logo-topo" src="img\logo-consultorias\logo-brq.png" alt="logo">
-        <p class="titulo-local">Brq - Plannig Poker</p>
+        <!-- <img class="logo-topo" src="img\logo-consultorias\logo-brq.svg" alt="logo"> -->
+        <p class="titulo-local left">Fibonacci</p>
+
+        <div class="right">
+          <i class="material-icons waves-effect waves-light waves-circle dropdown-button" data-activates="submenu" data-gutter="5" data-constrainwidth="false">more_vert</i>
+          <ul id="submenu" class="dropdown-content">
+            <li><a href="#anotacoes-modal" class="black-text modal-trigger">Nova anotação</a></li>
+            <li class="hide add-pontos"><a href="#" class="black-text ">Add pontos</a></li>
+            <li class="ver-pontos"><a href="#" id="btn-fade" class="black-text">Ver pontos</a></li>
+          </ul>
+        </div>
+        
     </nav>
 
     <ul id="slide-out" class="side-nav ">
         <li class="row"></li>
 
-        <h6 class="container brown-text">Cartas</h6>
+        <h6 class="container laranja-brq-text">Cartas</h6>
         <li><div class="divider"></div></li>
-        <li><a class="waves-effect black-text menu-lateral fibo" href="#">Fibonacci</a></li>
-        <li><a class="waves-effect black-text menu-lateral stand" href="#">Standard</a></li>
-        
-        <h6 class="container brown-text">Ferramentas</h6>
+        <li><a class="waves-effect menu-lateral azul-brq-text fibo" href="#">Fibonacci</a></li>
+        <li><a class="waves-effect menu-lateral azul-brq-text stand" href="#">Standard</a></li>
+        <h6 class="container laranja-brq-text">Ferramentas</h6>
         <li><div class="divider"></div></li>
-        <li><a class="waves-effect black-text menu-lateral crono" href="#">Cronometro / Timer</a></li>
-        <li><a class="waves-effect black-text menu-lateral agil" href="#">Ágil</a></li>
-        <li><a class="waves-effect black-text menu-lateral scrum" href="#">Scrum</a></li>
-        <h6 class="container brown-text">App</h6>
+        <li><a class="waves-effect menu-lateral azul-brq-text crono" href="#">Cronometro / Timer</a></li>
+        <li><a class="waves-effect menu-lateral azul-brq-text anotacoes" href="#">Anotações</a></li>
+        <li><a class="waves-effect menu-lateral azul-brq-text pontos" href="#">Pontos</a></li>
+        <h6 class="container laranja-brq-text">App</h6>
         <li><div class="divider"></div></li>
-        <li><a class="waves-effect black-text menu-lateral config" href="#">Configurações</a></li>
-        <li><a class="waves-effect black-text menu-lateral share" href="#">Compartilhar</a></li>
+        <li><a class="waves-effect menu-lateral azul-brq-text share" href="#">Compartilhar</a></li>
+        <li><a class="waves-effect menu-lateral azul-brq-text config" href="#">Configurações</a></li>
         <li><div class="divider"></div></li>
+        <li><a class="waves-effect menu-lateral azul-brq-text ajuda" href="#">Ajuda</a></li>
     </ul>
     
 
@@ -228,7 +349,18 @@
       <div class="flip-container box1" id="flip-toggle">     
         <div class="flipper">         
           <div class="front">             
-              <div class="box">
+              <div class="box carta-escondida fade-out">
+                  <div class="col s4 m5 center-align left">
+                      <div class="card-panel-big">
+                            <a href="#" class="mostrar-carta">
+                              <span class=""><img class="logo-big" id="img-fade" src="img/logo.fw.png"></span>
+                              <div class="div-fundo-bt-big"></div>
+                            </a>
+                      </div>
+                  </div>
+              </div>   
+
+              <div class="box selecao-carta select-cartas-topo">
                   <div class="col s4 m5 center-align left margem-esquerda40">
                       <div class="card-panel">
                         <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="0" data-standard="0">0</span>
@@ -236,44 +368,44 @@
                         </a>
                       </div>
                       <div class="card-panel">
-                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="3" data-standard="2">2</span>
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="3" data-standard="2">3</span>
                           <div class="div-fundo-bt"></div>
                         </a>
                       </div>
                       <div class="card-panel">
-                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="13" data-standard="8">8</span>
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="13" data-standard="8">13</span>
                           <div class="div-fundo-bt"></div>
                         </a>
                       </div>
                       <div class="card-panel">
-                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="55" data-standard="40">40</span>
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="55" data-standard="40">55</span>
                           <div class="div-fundo-bt"></div>
                         </a>
                       </div>
-                      <div class="card-panel standard-hide hide">
-                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="?" data-standard=""></span>
+                      <div class="card-panel standard-hide">
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="?" data-standard="">?</span>
                           <div class="div-fundo-bt"></div>
                         </a>
                       </div>
                   </div>
                   <div class="col s4 m5 center-align left margem-esquerda40">
                       <div class="card-panel">
-                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="1" data-standard="1/2">1/2</span>
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="1" data-standard="1/2">1</span>
                           <div class="div-fundo-bt"></div>
                         </a>
                       </div>
                       <div class="card-panel">
-                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="5" data-standard="3">3</span>
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="5" data-standard="3">5</span>
                           <div class="div-fundo-bt"></div>
                         </a>
                       </div>
                       <div class="card-panel">
-                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="21" data-standard="13">13</span>
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="21" data-standard="13">21</span>
                           <div class="div-fundo-bt"></div>
                         </a>
                       </div>
                       <div class="card-panel">
-                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="89" data-standard="100">100</span>
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="89" data-standard="100">89</span>
                           <div class="div-fundo-bt"></div>
                         </a>
                       </div>
@@ -286,22 +418,22 @@
                   </div>
                   <div class="col s4 m5 center-align left">
                       <div class="card-panel">
-                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="2" data-standard="1">1</span>
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="2" data-standard="1">2</span>
                           <div class="div-fundo-bt"></div>
                         </a>
                       </div>
                       <div class="card-panel">
-                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="8" data-standard="5">5</span>
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="8" data-standard="5">8</span>
                           <div class="div-fundo-bt"></div>
                         </a>
                       </div>
                       <div class="card-panel">
-                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="34" data-standard="20">20</span>
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="34" data-standard="20">34</span>
                           <div class="div-fundo-bt"></div>
                         </a>
                       </div>
                       <div class="card-panel">
-                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="144" data-standard="?">?</span>
+                        <a href="#" class="bt-slc-carta"><span class="white-text texto-card" data-fibo="144" data-standard="?">144</span>
                           <div class="div-fundo-bt"></div>
                         </a>
                       </div>
@@ -309,38 +441,7 @@
               </div>   
           </div>          
           <div class="back">              
-              <div class="box">
-                  <div class="col s4 m5 center-align left">
-                      <div class="card-panel-big">
-                            <a href="#" class="bt-slc-carta">
-                              <span class=""><img class="logo-big" src="img/logo-consultorias/logo-brq.svg"></span>
-                              <div class="div-fundo-bt-big"></div>
-                            </a>
-                      </div>
-                  </div>
-              </div>      
-          </div>      
-        </div>  
-      </div>
-  </div>
-
-  <div class="container2 cards2 hide">
-      <div class="flip-container box2" id="flip-toggle">     
-        <div class="flipper">         
-          <div class="front">             
-              <div class="box">
-                  <div class="col s4 m5 center-align left">
-                      <div class="card-panel-big">
-                            <a href="#" class="mostrar-carta">
-                              <span class=""><img class="logo-big" src="img/logo-consultorias/logo-brq.svg"></span>
-                              <div class="div-fundo-bt-big"></div>
-                            </a>
-                      </div>
-                  </div>
-              </div>   
-          </div>          
-          <div class="back">              
-              <div class="box">
+             <div class="box">
                   <div class="col s4 m5 center-align left">
                       <div class="card-panel-big">
                           <a href="#" class="voltar-selec-card">
@@ -350,23 +451,35 @@
                           </a>
                       </div>
                   </div>
-              </div>      
+              </div>            
           </div>      
         </div>  
       </div>
   </div>
+
+
 </div>
 
 <div id="crono" class="telas hide">
   <h1>Crono</h1>
+  <h1>Crono</h1>
+  <h1>Crono</h1>
+  <h1>Crono</h1>
+
+
   <input type="text" class="timepicker">
 </div>
-<div id="agil" class="telas hide">
-  <h1>Ágil</h1>
+
+<div id="anotacoes" class="telas hide">
+  <h1>anotações</h1>
+  <div class="centro"></div>
 </div>
-<div id="scrum" class="telas hide">
-  <h1>Scrum</h1>
+
+<div id="pontos" class="telas hide">
+  <h1>Pontos</h1>
+  <div class="centro"></div>
 </div>
+
 <div id="config" class="telas hide">
   <h1>Config</h1>
   <form action="#">
@@ -382,16 +495,33 @@
   </form>
 </div>
 
+<div id="ajuda" class="telas hide">
+  <h1>ajuda</h1>
+</div>
 
-  
+  <div id="anotacoes-modal" class="modal modal-fixed-footer">
+      <div class="modal-content">
+          <h5>Anotações</h5>
+          <textarea></textarea> <!-- id="numero-mesa" type="number" class="validate" placeholder="Número da mesa"> -->
+          
+      </div>
+      <div class="modal-footer">
+          <button class="btn green waves-effect waves-light modal-close acao-finalizar">Salvar</button>
+          <button class="btn-flat waves-effect waves-red modal-close acao-limpar">Enviar</button>
+      </div>
+  </div>
 
-<!-- <a href="#"  class="hide" id="bt-continuar"></a>
-<a href="#"  class="hide" id="bt-voltar"></a> -->
+
+
+
+<!-- <div class="rodape">
+    <p class="txt-rodape white-text ">Total de ponto: 150</p>
+</div> -->
 
 
   <script src="cordova.js"></script>
     <script src="js/jquery.min.js"></script>
-    <script src="js/materialize.min.js"></script>
+    <script src="js/materialize.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

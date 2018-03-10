@@ -1,6 +1,9 @@
+
+
+
 var trocaTextoBotão = function (tipo) {
   if(tipo == "fibo"){
-    $("titulo-local").text("Baralho fibonacci");
+    $(".titulo-local").text("Fibonacci");
     $( ".texto-card" ).each(function( index ) {
       if($(this).attr('data-fibo') != "coffe"){
         $( this ).text($(this).attr('data-fibo'));
@@ -12,7 +15,8 @@ var trocaTextoBotão = function (tipo) {
 
     });
   }else{
-    $( ".texto-card" ).each(function( index ) {
+      $(".titulo-local").text("Standard");
+      $( ".texto-card" ).each(function( index ) {
       if($(this).attr('data-standard') != "coffe"){
         $( this ).text($(this).attr('data-standard'));
         // esconde carta inferior esquerdo
@@ -23,52 +27,71 @@ var trocaTextoBotão = function (tipo) {
   }
 }
 
-trocaTextoBotão("fibo");
+
+
 
   // Initialize collapse button
-  $(".button-collapse").sideNav();
+$(".button-collapse").sideNav();
 
-  $(".bt-slc-carta").on("click",function(){
-    //viro e mostro o logo
+$(".bt-slc-carta").on("click",function(){
+  
+      $(".selecao-carta").addClass("fade-out");
+
+      //$(".carta-escondida").removeClass("hide");
+      $(".carta-escondida").removeClass("fade-out");
+      $(".carta-escondida").addClass("fade-in");
+
+      setTimeout(function(){ 
+        $('.selecao-carta').addClass('vai-pro-lado'); 
+      }, 500);
+
+      /////////////////////////////////mudo o texto do card final
+      if($(this).find("span").attr("data-standard") == "coffe" & $(this).find("span").attr("data-fibo") == "coffe" ){
+        //tira o texto anterior
+         $(".texto-final").text("");
+        //mostra img café
+        $(".cafe-img-big").removeClass("hide");
+      }else{
+        //esconde img café
+        $(".cafe-img-big").addClass("hide");
+        //troca o texto final
+        $(".texto-final").text($(this).text());
+      }
+      shake.startWatch(onShake, 30);
+});
+
+var funcMostrarCarta  = function(){
+  //habilito bt add pontos
+    $('.add-pontos').removeClass("hide");
     $(".box1").toggleClass("hover");
 
-    //mudo o texto do card final
-    if($(this).find("span").attr("data-standard") == "coffe" & $(this).find("span").attr("data-fibo") == "coffe" ){
-      //tira o texto anterior
-       $(".texto-final").text("");
-      //mostra img café
-      $(".cafe-img-big").removeClass("hide");
-    }else{
-      //esconde img café
-      $(".cafe-img-big").addClass("hide");
-      //troca o texto final
-      $(".texto-final").text($(this).text());
-    }
-
-    //escondo o box1 e mostro o box2
+    //volto menu pro lugar
     setTimeout(function(){ 
-      $(".cards1").toggleClass("hide");
-      $(".cards2").toggleClass("hide");
-      //volta box 1 na posição original
-      $(".box1").toggleClass("hover");
-      //libera o shake
-      shake.startWatch(onShake, 30);
+        $('.selecao-carta').removeClass('vai-pro-lado').removeClass('fade-out');
+    }, 500);
+}  
 
-    }, 300);
+$(".mostrar-carta").on("click",function(){
+    funcMostrarCarta();
+});
 
-  });
+//click no voltar
+$(".voltar-selec-card").on("click", function(){
+    //desabilito bt add pontos
 
-  //click carta logo segundo box
-  $(".mostrar-carta").on("click",function(){
-    $(".box2").toggleClass("hover");
-  });
+    //esconde carta
+    $(".carta-escondida").addClass("fade-out");
+    
+    $(".carta-escondida").removeClass("fade-in");
 
-  //click no voltar
-  $(".voltar-selec-card").on("click", function(){
-    $(".cards1").toggleClass("hide");
-    $(".cards2").toggleClass("hide");
-    //volta box 2 na posição original
-      $(".box2").toggleClass("hover");
+    $(".selecao-carta").removeClass("fade-out");
+
+    $('.add-pontos').addClass("hide");
+
+    $(".box1").toggleClass("hover");
+
+
+
   });
 
 
@@ -95,24 +118,29 @@ $(".menu-lateral").on("click", function(){
   }
   //crono
   if($(this).hasClass("crono")){
+    $(".titulo-local").text("Cronometro");
     $("#crono").removeClass("hide");
     $(this).addClass("ativo");
     
   }
-  //agil
-  if($(this).hasClass("agil")){
-    $("#agil").removeClass("hide");
+  //anotacoes
+  if($(this).hasClass("anotacoes")){
+    $(".titulo-local").text("Anotações");
+    $("#anotacoes").removeClass("hide");
     $(this).addClass("ativo");
     
   }
-  //scrum
-  if($(this).hasClass("scrum")){
-    $("#scrum").removeClass("hide");
+  //Pontos
+  if($(this).hasClass("pontos")){
+    $(".titulo-local").text("Pontos");
+    $("#pontos").removeClass("hide");
     $(this).addClass("ativo");
     
   }
+
   //config
   if($(this).hasClass("config")){
+    $(".titulo-local").text("Configurações");
     $("#config").removeClass("hide");
     $(this).addClass("ativo");
     
@@ -120,6 +148,14 @@ $(".menu-lateral").on("click", function(){
   //share
   if($(this).hasClass("share")){
     //$("#share").removeClass("hide");
+    $(this).addClass("ativo");
+    
+  }
+
+  //ajuda
+  if($(this).hasClass("ajuda")){
+    $(".titulo-local").text("Ajuda");
+    $("#ajuda").removeClass("hide");
     $(this).addClass("ativo");
     
   }
@@ -132,9 +168,53 @@ $(".menu-lateral").on("click", function(){
 
 
 
+var addPontos = function() {
+
+  var $toastContent = '<span>Adicionado XXX pontos</span><button class="btn-flat toast-action deep-orange white-text bt-undo">Undo</button>';
+  Materialize.toast($toastContent, 15000);
+
+}
+
+var verPontos = function() {
+
+  var $toastContent = '<span>Total de XXX pontos</span><button class="btn-flat toast-action deep-orange white-text bt-undo">Ver +</button>';
+  Materialize.toast($toastContent, 15000);
+
+}
+
+$('.add-pontos').on('click', function(){
+  addPontos();
+});
+
+$('.ver-pontos').on('click', function(){
+  verPontos();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var onShake = function () {
   // Fired when a shake is detected 
-  $(".box2").toggleClass("hover");
+  funcMostrarCarta();
   //desativa o shake
   shake.stopWatch();
 };
@@ -152,7 +232,7 @@ var onError = function () {
 
 function onLoad() {
     //inicia em fibo
-    
+    $('.modal').modal();
     $(".menu-lateral.fibo").addClass("ativo");
 
 
@@ -164,7 +244,7 @@ function onLoad() {
 function onDeviceReady() {
 
     //escreve os botões
-    trocaTextoBotão(); // para iniciar com fibonacci passar o parametro "fibo"
+    trocaTextoBotão("fibo"); // para iniciar com fibonacci passar o parametro "fibo"
 
     // Now safe to use device APIs
     
@@ -182,3 +262,4 @@ function onDeviceReady() {
     aftershow: function(){} //Function for after opening timepicker
   });
 }
+

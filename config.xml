@@ -53,7 +53,7 @@
     <plugin name="cordova-plugin-shake" spec="^0.6.0" />
     <plugin name="cordova-plugin-vibration" spec="^3.0.1" />
     <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
-    <preference name="StatusBarBackgroundColor" value="#E86C13" />
+    <preference name="StatusBarBackgroundColor" value="#0086c0" />
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
     <engine name="browser" spec="^5.0.3" />
     <engine name="android" spec="^7.0.0" />
