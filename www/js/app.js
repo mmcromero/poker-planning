@@ -102,8 +102,9 @@ $(".menu-lateral").on("click", function(){
   $(".menu-lateral").removeClass("ativo");
 
   //escondo todas as telas
-  $(".telas").addClass("hide");
-
+  if(!$(this).hasClass("share")){
+      $(".telas").addClass("hide");
+  }
   //fibo
   if($(this).hasClass("fibo")){
     $("#cards").removeClass("hide");
@@ -146,11 +147,12 @@ $(".menu-lateral").on("click", function(){
     
   }
   //share
-  if($(this).hasClass("share")){
+/*  if($(this).hasClass("share")){
     //$("#share").removeClass("hide");
     $(this).addClass("ativo");
+    //compartilhar();
     
-  }
+  }*/
 
   //ajuda
   if($(this).hasClass("ajuda")){
@@ -247,6 +249,42 @@ function onDeviceReady() {
     trocaTextoBotão("fibo"); // para iniciar com fibonacci passar o parametro "fibo"
 
     // Now safe to use device APIs
+
+
+
+
+
+    ///////////////////////////////////////////////SHARE
+    var options = {
+      message: 'mensagem personalizada', // not supported on some apps (Facebook, Instagram)
+      subject: 'Marco Romero', // fi. for email
+      files: ['', ''], // an array of filenames either locally or remotely
+      url: 'https://play.google.com/store/apps/details?id=br.com.marcoromero.pokerplanning',
+      chooserTitle: 'Conheça meu App' // Android only, you can override the default share sheet title
+    }
+     
+    var onSuccess = function(result) {
+      console.log("Share completed? " + result.completed); // On Android apps mostly return false even while it's true
+      console.log("Shared to app: " + result.app); // On Android result.app is currently empty. On iOS it's empty when sharing is cancelled (result.completed=false)
+    }
+     
+    var onError = function(msg) {
+      console.log("Sharing failed with message: " + msg);
+    }
+    
+    var compartilhar = function(){
+        window.plugins.socialsharing.shareWithOptions(options, onSuccess, onError);
+    } 
+
+    $(".share").on("click", function(){
+      //alert("compartilhar");
+      compartilhar();
+    });
+
+
+
+
+
     
 
 
