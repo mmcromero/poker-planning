@@ -296,15 +296,21 @@ textarea {
             left: 600px !important;
          }
 
+.abas-ajuda{
+    /*top: 56px;*/
+}
 
+.button-collapse {
+	color: white !important	;
+}
 
     </style>
 </head>
 <body onload="onLoad()">
-
+<!--
     <nav class="azul-brq topo-fixo" id="topo">
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-        <!-- <img class="logo-topo" src="img\logo-consultorias\logo-brq.svg" alt="logo"> -->
+         <img class="logo-topo" src="img\logo-consultorias\logo-brq.svg" alt="logo"> 
         <p class="titulo-local left">Fibonacci</p>
 
         <div class="right">
@@ -315,30 +321,86 @@ textarea {
             <li class="ver-pontos"><a href="#" id="btn-fade" class="black-text">Ver pontos</a></li>
           </ul>
         </div>
+
+
+      <ul class="tabs azul-brq abas-ajuda hide">
+        <li class="tab"><a href="#tab-scrum" class="white-text waves-effect waves-light active">Scrum</a></li>
+        <li class="tab"><a href="#tab-agil" class="white-text waves-effect waves-light">Ágil</a></li>
+        <li class="tab"><a href="#tab-poker" class="white-text waves-effect waves-light">Poker</a></li>
+      </ul>
         
     </nav>
+-->
 
-    <ul id="slide-out" class="side-nav ">
-        <li class="row"></li>
+<div class="topo-fixo z-depth-1">
+		<div class="azul-brq white-text valign-wrapper">
+			<a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+			<!-- <a href="#" data-activates="slide-out2" class="button-collapse2"><i class="material-icons">menu</i></a> -->
+  			<h5 class="titulo titulo-local">Fibonacci</h5>
 
-        <h6 class="container laranja-brq-text">Cartas</h6>
-        <li><div class="divider"></div></li>
-        <li><a class="waves-effect menu-lateral azul-brq-text fibo" href="#">Fibonacci</a></li>
-        <li><a class="waves-effect menu-lateral azul-brq-text stand" href="#">Standard</a></li>
-        <h6 class="container laranja-brq-text">Ferramentas</h6>
-        <li><div class="divider"></div></li>
-        <li><a class="waves-effect menu-lateral azul-brq-text crono" href="#">Cronometro / Timer</a></li>
-        <li><a class="waves-effect menu-lateral azul-brq-text anotacoes" href="#">Anotações</a></li>
-        <li><a class="waves-effect menu-lateral azul-brq-text pontos" href="#">Pontos</a></li>
-        <h6 class="container laranja-brq-text">App</h6>
-        <li><div class="divider"></div></li>
-        <li><a class="waves-effect menu-lateral azul-brq-text share" href="#">Compartilhar</a></li>
-        <li><a class="waves-effect menu-lateral azul-brq-text config" href="#">Configurações</a></li>
-        <li><div class="divider"></div></li>
-        <li><a class="waves-effect menu-lateral azul-brq-text ajuda" href="#">Ajuda</a></li>
-    </ul>
+  			<div>
+    			<!-- <i class="material-icons waves-effect waves-light waves-circle scan-qrcode">camera</i> -->
+    			<i class="material-icons waves-effect waves-light waves-circle dropdown-button" data-activates="submenu" data-gutter="5" data-constrainwidth="false">more_vert</i>
+    			<ul id="submenu" class="dropdown-content">
+    				<li><a href="#" data-activates="slide-out2" class="black-text button-collapse2">Atividades</a></li>
+            <li><a href="#anotacoes-modal" class="black-text modal-trigger">Nova anotação</a></li>
+            <li class="hide add-pontos"><a href="#" class="black-text ">Add pontos</a></li>
+            <li class="ver-pontos"><a href="#" id="btn-fade" class="black-text">Ver pontos</a></li>
+          </ul>
+  			</div>
+
+
+		</div>
+
+		<ul class="tabs azul-brq abas-ajuda hide">
+    		<li class="tab"><a href="#tab-scrum" class="white-text waves-effect waves-light active">Scrum</a></li>
+    		<li class="tab"><a href="#tab-agil" class="white-text waves-effect waves-light">Ágil</a></li>
+    		<li class="tab"><a href="#tab-poker" class="white-text waves-effect waves-light">Poker</a></li>
+		</ul>
+</div>
+
+
+<ul id="slide-out" class="side-nav ">
+    <li class="row"></li>
+
+    <h6 class="container laranja-brq-text">Cartas</h6>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect menu-lateral azul-brq-text fibo" href="#">Fibonacci</a></li>
+    <li><a class="waves-effect menu-lateral azul-brq-text stand" href="#">Standard</a></li>
+    <h6 class="container laranja-brq-text">Ferramentas</h6>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect menu-lateral azul-brq-text crono" href="#">Cronometro / Timer</a></li>
+    <li><a class="waves-effect menu-lateral azul-brq-text anotacoes" href="#">Anotações</a></li>
+    <li><a class="waves-effect menu-lateral azul-brq-text pontos" href="#">Pontos</a></li>
+    <h6 class="container laranja-brq-text">App</h6>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect menu-lateral azul-brq-text share" href="#">Compartilhar</a></li>
+    <li><a class="waves-effect menu-lateral azul-brq-text config" href="#">Configurações</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect menu-lateral azul-brq-text ajuda" href="#">Ajuda</a></li>
+</ul>
     
+<ul id="slide-out2" class="side-nav ">
+    <li class="row"></li>
 
+    <h6 class="container laranja-brq-text">Atividades</h6>
+    <div class="section" id="t">
+      <h6 class="container brown-text">Pontuadas</h6>
+      <div class="collection">
+        <a class="collection-item waves-effect black-text">308</a>
+        <a class="collection-item waves-effect black-text">345</a>
+        <a class="collection-item waves-effect black-text">400</a>
+        <a class="collection-item waves-effect black-text">505</a>
+      </div>
+      <h6 class="container brown-text">não analisadas</h6>
+      <div class="collection">
+        <a class="collection-item waves-effect black-text">308</a>
+        <a class="collection-item waves-effect black-text">345</a>
+        <a class="collection-item waves-effect black-text">400</a>
+        <a class="collection-item waves-effect black-text">505</a>
+      </div>
+    </div>
+</ul>
 
 
 
@@ -496,7 +558,36 @@ textarea {
 </div>
 
 <div id="ajuda" class="telas hide">
-  <h1>ajuda</h1>
+  <div class="section" id="tab-scrum">
+      <h6 class="container brown-text">Scrum</h6>
+      <div class="collection">
+        <a class="collection-item waves-effect black-text">Só de Cenoura</a>
+        <a class="collection-item waves-effect black-text">Com Nutella</a>
+        <a class="collection-item waves-effect black-text">De Brigadeiro</a>
+        <a class="collection-item waves-effect black-text">Açucarado</a>
+      </div>
+    </div>
+
+    <div class="section" id="tab-agil">
+      <h6 class="container brown-text">Ágil</h6>
+      <div class="collection">
+        <a class="collection-item waves-effect black-text">Espresso</a>
+        <a class="collection-item waves-effect black-text">Capuchino</a>
+        <a class="collection-item waves-effect black-text">Mocachino</a>
+        <a class="collection-item waves-effect black-text">Café com Leite</a>
+      </div>
+    </div>
+
+    <div class="section" id="tab-poker">
+      <h6 class="container brown-text">Poker</h6>
+      <div class="collection">
+        <a class="collection-item waves-effect black-text">Espresso</a>
+        <a class="collection-item waves-effect black-text">Capuchino</a>
+        <a class="collection-item waves-effect black-text">Mocachino</a>
+        <a class="collection-item waves-effect black-text">Café com Leite</a>
+      </div>
+    </div>
+
 </div>
 
   <div id="anotacoes-modal" class="modal modal-fixed-footer">
