@@ -33,6 +33,16 @@ var trocaTextoBotão = function (tipo) {
   // Initialize collapse button
 $(".button-collapse").sideNav();
 
+$('.button-collapse2').sideNav({
+      menuWidth: 300, // Default is 300
+      edge: 'right', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true, // Choose whether you can drag to open on touch screens,
+      onOpen: function(el) { /* Do Stuff */ }, // A function to be called when sideNav is opened
+      onClose: function(el) { /* Do Stuff */ }, // A function to be called when sideNav is closed
+    }
+  );
+
 $(".bt-slc-carta").on("click",function(){
   
       $(".selecao-carta").addClass("fade-out");
@@ -105,6 +115,8 @@ $(".menu-lateral").on("click", function(){
   if(!$(this).hasClass("share")){
       $(".telas").addClass("hide");
   }
+
+
   //fibo
   if($(this).hasClass("fibo")){
     $("#cards").removeClass("hide");
@@ -158,8 +170,11 @@ $(".menu-lateral").on("click", function(){
   if($(this).hasClass("ajuda")){
     $(".titulo-local").text("Ajuda");
     $("#ajuda").removeClass("hide");
+    $(".abas-ajuda").removeClass('hide');
     $(this).addClass("ativo");
     
+  }else{
+    $(".abas-ajuda").addClass('hide');
   }
 
   setTimeout(function(){ $('.button-collapse').sideNav('hide'); }, 200);
